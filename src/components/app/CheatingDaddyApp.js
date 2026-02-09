@@ -113,9 +113,9 @@ export class CheatingDaddyApp extends LitElement {
         }
 
         .sidebar-brand {
-            padding: var(--space-sm) var(--space-lg);
-            padding-top: var(--space-md);
-            margin-bottom: var(--space-lg);
+            padding: var(--space-xs) var(--space-sm);
+            padding-top: var(--space-sm);
+            margin-bottom: var(--space-sm);
         }
 
         .sidebar-brand h1 {
@@ -129,16 +129,16 @@ export class CheatingDaddyApp extends LitElement {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: var(--space-xs);
-            padding: 0 var(--space-sm);
+            gap: 2px;
+            padding: 0 var(--space-xs);
             -webkit-app-region: no-drag;
         }
 
         .nav-item {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm) var(--space-md);
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-md);
             color: var(--text-secondary);
             font-size: var(--font-size-sm);
@@ -162,23 +162,23 @@ export class CheatingDaddyApp extends LitElement {
         }
 
         .nav-item svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             flex-shrink: 0;
         }
 
         .sidebar-footer {
-            padding: var(--space-sm);
-            margin-top: var(--space-sm);
+            padding: var(--space-xs);
+            margin-top: var(--space-xs);
             -webkit-app-region: no-drag;
         }
 
         .update-btn {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--space-xs);
             width: 100%;
-            padding: var(--space-sm) var(--space-md);
+            padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-md);
             border: 1px solid rgba(239, 68, 68, 0.2);
             background: rgba(239, 68, 68, 0.08);
@@ -213,7 +213,7 @@ export class CheatingDaddyApp extends LitElement {
         .version-text {
             font-size: var(--font-size-xs);
             color: var(--text-muted);
-            padding: var(--space-xs) var(--space-md);
+            padding: var(--space-xs) var(--space-sm);
         }
 
         /* ── Main content area ── */
@@ -224,6 +224,8 @@ export class CheatingDaddyApp extends LitElement {
             display: flex;
             flex-direction: column;
             background: var(--bg-app);
+            padding-top: 24px;
+            padding-bottom: 20px;
         }
 
         /* Live mode top bar */

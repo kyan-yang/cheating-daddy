@@ -1,13 +1,14 @@
 const { BrowserWindow, globalShortcut, ipcMain, screen } = require('electron');
 const path = require('node:path');
 const storage = require('../storage');
+const { WINDOW_SIZES } = require('./windowConfig');
 
 let mouseEventsIgnored = false;
 
 function createWindow(sendToRenderer, geminiSessionRef) {
     // Get layout preference (default to 'normal')
-    let windowWidth = 1100;
-    let windowHeight = 800;
+    let windowWidth = WINDOW_SIZES.default.width;
+    let windowHeight = WINDOW_SIZES.default.height;
 
     const mainWindow = new BrowserWindow({
         width: windowWidth,
@@ -305,18 +306,14 @@ function setupWindowIpcHandlers(mainWindow, sendToRenderer, geminiSessionRef) {
             const { width: screenWidth } = primaryDisplay.workAreaSize;
 
             if (view === 'assistant') {
-                // Shrink window for live view
-                const liveWidth = 850;
-                const liveHeight = 400;
-                const x = Math.floor((screenWidth - liveWidth) / 2);
-                mainWindow.setSize(liveWidth, liveHeight);
+                const { width, height } = WINDOW_SIZES.assistant;
+                const x = Math.floor((screenWidth - width) / 2);
+                mainWindow.setSize(width, height);
                 mainWindow.setPosition(x, 0);
             } else {
-                // Restore full size
-                const fullWidth = 1100;
-                const fullHeight = 800;
-                const x = Math.floor((screenWidth - fullWidth) / 2);
-                mainWindow.setSize(fullWidth, fullHeight);
+                const { width, height } = WINDOW_SIZES.default;
+                const x = Math.floor((screenWidth - width) / 2);
+                mainWindow.setSize(width, height);
                 mainWindow.setPosition(x, 0);
                 mainWindow.setIgnoreMouseEvents(false);
             }

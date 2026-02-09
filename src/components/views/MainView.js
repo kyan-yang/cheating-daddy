@@ -14,8 +14,9 @@ export class MainView extends LitElement {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             padding: var(--space-xl) var(--space-lg);
+            overflow-y: auto;
         }
 
         .form-wrapper {
