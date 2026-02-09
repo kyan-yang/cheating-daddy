@@ -24,6 +24,7 @@
     },
     "license": "GPL-3.0",
     "dependencies": {
+        "@electron-forge/core": "^7.11.1",
         "@google/genai": "^1.2.0",
         "@huggingface/transformers": "^3.8.1",
         "electron-squirrel-startup": "^1.0.1",
@@ -31,16 +32,16 @@
         "ws": "^8.19.0"
     },
     "devDependencies": {
-        "@electron-forge/cli": "^7.8.1",
-        "@electron-forge/maker-deb": "^7.8.1",
-        "@electron-forge/maker-dmg": "^7.8.1",
-        "@electron-forge/maker-rpm": "^7.8.1",
-        "@electron-forge/maker-squirrel": "^7.8.1",
-        "@electron-forge/maker-zip": "^7.8.1",
-        "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
-        "@electron-forge/plugin-fuses": "^7.8.1",
+        "@electron-forge/cli": "^7.11.1",
+        "@electron-forge/maker-deb": "^7.11.1",
+        "@electron-forge/maker-dmg": "^7.11.1",
+        "@electron-forge/maker-rpm": "^7.11.1",
+        "@electron-forge/maker-squirrel": "^7.11.1",
+        "@electron-forge/maker-zip": "^7.11.1",
+        "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
+        "@electron-forge/plugin-fuses": "^7.11.1",
         "@electron/fuses": "^1.8.0",
-        "@reforged/maker-appimage": "^5.0.0",
-        "electron": "^30.0.5"
+        "@reforged/maker-appimage": "^5.2.0",
+        "electron": "^40.2.1"
     }
 }
